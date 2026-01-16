@@ -50,18 +50,16 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 p-4">
-      <Card className="w-full max-w-md border-blue-200 bg-white shadow-xl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 p-4 text-background bg-background">
+      <Card className="w-full max-w-md border-gray-800 bg-gray-950/50 backdrop-blur">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-blue-100 rounded-full">
-              <Shield className="h-8 w-8 text-blue-600" />
+            <div className="p-3 bg-blue-500/10 rounded-full">
+              <Shield className="h-8 w-8 text-blue-500" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold text-gray-900">Sistema de Seguridad IoT</CardTitle>
-          <CardDescription className="text-gray-600">
-            Ingresa tus credenciales para acceder al dashboard
-          </CardDescription>
+          <CardTitle className="text-2xl font-bold">Sistema de Seguridad IoT</CardTitle>
+          <CardDescription>Ingresa tus credenciales para acceder al dashboard</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
@@ -82,7 +80,7 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={loading}
-                className="bg-blue-50/50 border-blue-200 focus:border-blue-500"
+                className="bg-gray-900/50 border-gray-800"
               />
             </div>
 
@@ -96,7 +94,7 @@ export default function LoginPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 disabled={loading}
-                className="bg-blue-50/50 border-blue-200 focus:border-blue-500"
+                className="bg-gray-900/50 border-gray-800"
               />
             </div>
 
@@ -111,9 +109,9 @@ export default function LoginPage() {
               )}
             </Button>
 
-            <div className="text-center text-sm text-gray-600">
+            <div className="text-center text-sm text-gray-400">
               ¿No tienes cuenta?{" "}
-              <Link href="/auth/sign-up" className="text-blue-600 hover:text-blue-700 font-medium">
+              <Link href="/auth/sign-up" className="text-blue-500 hover:text-blue-400">
                 Crear cuenta
               </Link>
             </div>

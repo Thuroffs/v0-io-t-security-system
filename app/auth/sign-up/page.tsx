@@ -65,23 +65,21 @@ export default function SignUpPage() {
 
   if (success) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 p-4">
-        <Card className="w-full max-w-md border-blue-200 bg-white shadow-xl">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 p-4">
+        <Card className="w-full max-w-md border-gray-800 bg-gray-950/50 backdrop-blur">
           <CardHeader className="space-y-2 text-center">
             <div className="flex justify-center mb-4">
-              <div className="p-3 bg-green-100 rounded-full">
-                <CheckCircle2 className="h-8 w-8 text-green-600" />
+              <div className="p-3 bg-green-500/10 rounded-full">
+                <CheckCircle2 className="h-8 w-8 text-green-500" />
               </div>
             </div>
-            <CardTitle className="text-2xl font-bold text-gray-900">Cuenta creada exitosamente</CardTitle>
-            <CardDescription className="text-gray-600">
-              Revisa tu correo electrónico para confirmar tu cuenta
-            </CardDescription>
+            <CardTitle className="text-2xl font-bold">Cuenta creada exitosamente</CardTitle>
+            <CardDescription>Revisa tu correo electrónico para confirmar tu cuenta</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="text-center space-y-4">
-              <p className="text-sm text-gray-600">
-                Hemos enviado un enlace de confirmación a <strong className="text-gray-900">{email}</strong>
+              <p className="text-sm text-gray-400">
+                Hemos enviado un enlace de confirmación a <strong>{email}</strong>
               </p>
               <Link href="/auth/login">
                 <Button className="w-full">Ir al inicio de sesión</Button>
@@ -94,16 +92,16 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 p-4">
-      <Card className="w-full max-w-md border-blue-200 bg-white shadow-xl">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 p-4">
+      <Card className="w-full max-w-md border-gray-800 bg-gray-950/50 backdrop-blur">
         <CardHeader className="space-y-2 text-center">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-blue-100 rounded-full">
-              <Shield className="h-8 w-8 text-blue-600" />
+            <div className="p-3 bg-blue-500/10 rounded-full">
+              <Shield className="h-8 w-8 text-blue-500" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold text-gray-900">Crear cuenta</CardTitle>
-          <CardDescription className="text-gray-600">Regístrate para acceder al sistema de seguridad</CardDescription>
+          <CardTitle className="text-2xl font-bold">Crear cuenta</CardTitle>
+          <CardDescription>Regístrate para acceder al sistema de seguridad</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSignUp} className="space-y-4">
@@ -124,7 +122,7 @@ export default function SignUpPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 disabled={loading}
-                className="bg-blue-50/50 border-blue-200 focus:border-blue-500"
+                className="bg-gray-900/50 border-gray-800"
               />
             </div>
 
@@ -138,7 +136,7 @@ export default function SignUpPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 disabled={loading}
-                className="bg-blue-50/50 border-blue-200 focus:border-blue-500"
+                className="bg-gray-900/50 border-gray-800"
               />
             </div>
 
@@ -152,7 +150,7 @@ export default function SignUpPage() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 disabled={loading}
-                className="bg-blue-50/50 border-blue-200 focus:border-blue-500"
+                className="bg-gray-900/50 border-gray-800"
               />
             </div>
 
@@ -167,9 +165,9 @@ export default function SignUpPage() {
               )}
             </Button>
 
-            <div className="text-center text-sm text-gray-600">
+            <div className="text-center text-sm text-gray-400">
               ¿Ya tienes cuenta?{" "}
-              <Link href="/auth/login" className="text-blue-600 hover:text-blue-700 font-medium">
+              <Link href="/auth/login" className="text-blue-500 hover:text-blue-400">
                 Iniciar sesión
               </Link>
             </div>
